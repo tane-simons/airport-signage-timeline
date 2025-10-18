@@ -1,88 +1,22 @@
-# SolariDisplay - A Split-Flap Display with CSS and JavaScript
+#Licence
+The MIT License
 
-Library to create a Split-Flap Display, or Solari Board. 
+Copyright (c) 2012 Jaume Sanchez Elias
 
-You can see the blog post here [Split-flap display with CSS and JavaScript](http://www.clicktorelease.com/blog/split-flap-display).
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-Forks, pull requests and code critiques are welcome!
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
 
-#### Using the code ####
-
-Include SolariDisplay.[min.]js and SolariDisplay.css. 
-
-```html
-<script src="SolariDisplay.min.js"></script>
-<link href="SolariBoard.css">
-````
-
-You'll need to add this markup
-
-```html
-<div id="viewport" class="displayBase">
-	<div id="container" ></div>
-</div>
-```
-
-and this CSS
-```css
-#viewport{ position: absolute; left: 0; top: 0; right: 0; bottom: 0; }
-#container{ position: absolute; left: 0; top: 0; right: 0; bottom: 0; font-family: sans-serif; }
-```
-
-and then this basic code:
-
-```js
-var display; // this will be the Solari Display object
-
-window.requestAnimationFrame = window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame; // you'll need support for rAF
-
-window.addEventListener( 'load', function() { // once the page loads
-
-	// create a SolariDisplay
-
-	/*
-		parameters:
-		container - the element that will contain the display
-		format - an array of either a single character or an array of characters. 
-			The length of this format array is the number of segments.
-			There are several defines ready to use:
-				CTR.SOLARIVALUES.letter: A to Z and space
-				CTR.SOLARIVALUES.number: 0 to 9
-				CTR.SOLARIVALUES.hour: 00 to 23
-				CTR.SOLARIVALUES.minute: 00 to 59
-		segmentWidth: the width in pixels of a single segment
-		segmentHeight: the height in pixels of a single segment
-		fontSize: the size of the font in pixels
-	*/
-
-	display = new CTR.SolariBoard( {
-		container: container,
-		format: [ 
-			CTR.SOLARIVALUES.letter,
-			CTR.SOLARIVALUES.letter,
-			CTR.SOLARIVALUES.letter,
-			CTR.SOLARIVALUES.letter,
-			CTR.SOLARIVALUES.letter,
-			CTR.SOLARIVALUES.letter,
-			CTR.SOLARIVALUES.letter,
-			CTR.SOLARIVALUES.letter,
-			CTR.SOLARIVALUES.letter,
-			CTR.SOLARIVALUES.letter,
-			CTR.SOLARIVALUES.letter
-		 ],
-		segmentWidth: 70,
-		segmentHeight: 120,
-		fontSize: 100
-	} );
-
-	// update the content of the display
-	display.setContent( 'HELLO WORLD' );
-
-}, false );
-```
-
-#### License ####
-
-MIT licensed
-
-Copyright (C) 2012 Jaume Sanchez Elias, http://www.clicktorelease.com
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
