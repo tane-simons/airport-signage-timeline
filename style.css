@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-55');
+
+body { 
+    background-color: rgb(36, 36, 36); 
+    font-family: "helvetica", serif; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3vw;
+}
+
+header img {
+    width: 5vw;
+    height: 5vw;
+}
+
+h1 {
+    font-size: 4vw;
+    text-align: left;
+    color: rgba(255,255,255,1); 
+}
+
+#bg {
+    width: 85%;
+    background-color: rgb(70, 70, 70);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1vw 0;
+    border: 2px #ccc solid;
+}
+
+#controls {
+    width: 79vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+button {
+    margin: 0 0 10px 10px;
+    padding: 0 0.8vw;
+    line-height: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px #111 solid;
+    background-color: #eee;
+    color: #111;
+    font-size: 1.2vw;
+    font-weight: 600;
+    height: 2.5vw;
+}
+
+button:hover {
+    background-color: #0e0e0e;
+    color: #eee;
+    border: 2px #eee solid;
+}
+
+#year-advancement {
+    display: flex;
+    flex-direction: row;
+    color: #eee;
+    font-weight: 600;
+    font-size: 1.5vw;
+    line-height: 1vw;
+    gap: 16vw;
+    align-items: flex-end;
+}
+
+#container * {
+    transform-style: preserve-3d;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: fit-content;
+}
+
+.display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 58px;
+}
+
+.segments {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    gap: 0.3vw;
+    font-family: "Share Tech Mono", mono;
+    font-size: clamp(0.8rem, 3.5vw, 3rem);
+    width: 80%;
+}
+
+.segment {
+    color: #ccc;
+    text-align: center;
+    height: 80px;
+    position: relative;
+    border: #333 1px solid;
+    border-radius: 6px;
+}
+
+.segment div {
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    box-shadow: inset 0 0 50px rgba(90,90,90,.1);
+}
+
+.segment .front,
+.segment .flip-front,
+.segment .flip-back,
+.segment .back {
+    position: absolute;
+    overflow: hidden;
+    text-transform: uppercase;
+}
+
+.segment .front {
+    left: 0;
+    top: 0;
+    border-radius: 5px 5px 0 0;
+    background-color: #111;
+}
+
+.segment .back {
+    left: 0;
+    top: 50%;
+    border-radius: 0 0 5px 5px;
+    line-height: 0px;
+    overflow: hidden;
+    background-color: #222;
+}
+
+.segment .flip-back {
+    left: 0;
+    top: 0;
+    border-radius: 5px 5px 0 0;
+    transform: rotateX(-45deg);
+    transform-origin: 0 50%;
+}
+
+.segment .flip-front {
+    left: 0;
+    top: 0;
+    line-height: 0px;
+    overflow: hidden;
+    border-radius: 0 0 5px 5px;
+    transform: rotateX(135deg) translateY(50%) translateZ(.1px);
+    transform-origin: 50% 50%;
+    border-top: #111 2px solid;
+}
+
+#img-container {
+    width: 79vw;
+}
+
+#image {
+    border-radius: 5px;
+    max-height: 50vh;
+    max-width: 80vw;
+    margin: 2vw 0 1vw 0;
+}
+
