@@ -7,6 +7,7 @@ var slides = [
     { title: "1967 Schiphol Standard", image: "imgs/1967.png" },
     { title: "1974 AIGA/DOT Pictograms", image: "imgs/1974.png" },
     { title: "1994 Digital Info Displays", image: "imgs/1994.png" },
+    { title: "2019 Indoor Mapping", image: "imgs/2019.png"},
     { title: "2022 Parallel Reality", image: "imgs/2022.gif" },
     { title: "2030+ Augmented Reality", image: "imgs/2030.png" }
 ];
@@ -17,7 +18,7 @@ var flapSound = new Audio('audio/click.mp3');
 
 var CTR = CTR || {};
 CTR.SOLARIVALUES = { 
-    letter: " ,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,0,1,2,3,4,5,6,7,8,9,+,/".split(",") 
+    letter: " ,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,0,1,2,3,4,5,6,7,8,9,-,+,/".split(",") 
 };
 
 CTR.SolariSegment = function(b) {
